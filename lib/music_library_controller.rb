@@ -35,6 +35,7 @@ class MusicLibraryController
   end
   
   def list_songs
+    binding.pry
     alphabetized = Song.all.sort_by { |s| s.name}
     alphabetized.each_with_index do |element, index| 
       puts "#{index + 1}. #{element.artist.name} - #{element.name} - #{element.genre.name}"
